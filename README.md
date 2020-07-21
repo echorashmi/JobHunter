@@ -7,7 +7,7 @@ Job Hunter Script for parsing Job Descriptions on Websites.
 //Possible Next Steps:
 1. Create a NoSql version of the database so I can better parse and analyse the content
 2. Create a WordCloud Spitter that can spit the top keywords?
-3. 
+3. Create a table to tabulate the differences between a job posting and my resume - refer to the attached document "Job Posting Analysis.pdf" file for details on a strategy. 
 
 
 
