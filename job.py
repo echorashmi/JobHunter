@@ -1,15 +1,13 @@
-import sqlite3
+#DB: Mongo
+import pymongo
 
-conn = sqlite3.connect('jobdb.db')
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["jobdb"]
+mycol = mydb["jobdb"]
 
-c = conn.cursor()
+myquery = {"_type": "JobDescription"}
 
-query = "Select * from job_postings"
-results = c.execute(query)
-conn.commit()
+mydoc = mycol.find(myquery)
 
-for row in results:
-    print(results[0]['company'])
-
-conn.close()
-
+for x in mydoc:
+    print(x)
